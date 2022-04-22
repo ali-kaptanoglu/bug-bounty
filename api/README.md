@@ -16,3 +16,7 @@ Send wildcard {"user_id":"*"}
 XSS payload? - E.g: {"name":"In<script>alert(21)</script>on}
   
 Found a limit / page param? (e.g: /api/news?limit=100) It might be vulnerable to Layer 7 DoS. Try to send a long value (e.g: limit=999999999)
+  
+  
+ ![alt text](https://raw.githubusercontent.com/ali-kaptanoglu/bug-bounty/main/api/api3.png)
+
