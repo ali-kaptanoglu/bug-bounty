@@ -18,6 +18,9 @@ Then, I did the same as i did with my first account,
 
 I replaced my second account username with my first account username.
 
+![Alt text](https://raw.githubusercontent.com/ali-kaptanoglu/bug-bounty/main/Account-takeover/virustotal.png "virustotal")
+
+
 
 And, I forwarded the request.
 Then I chose a new password and entered it twice as required. After that I tried to login to my first account nothumanninja.
