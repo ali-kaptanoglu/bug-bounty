@@ -25,5 +25,6 @@ Found a limit / page param? (e.g: /api/news?limit=100) It might be vulnerable to
   
   ![alt text](https://raw.githubusercontent.com/ali-kaptanoglu/bug-bounty/main/api/api5.jpg)
   
+  
     ![alt text](https://raw.githubusercontent.com/ali-kaptanoglu/bug-bounty/main/api/api6.png)
 
