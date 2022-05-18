@@ -1,3 +1,9 @@
+
+
+----------------------------------------
+Public Jenkins instance with /script enabled
+https://hackerone.com/reports/403402
+-----------------------------------------
 Search for all leaked keys/secrets using one regex! 
 
 
