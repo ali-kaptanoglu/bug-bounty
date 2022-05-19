@@ -31,3 +31,5 @@ The full procedure for uploading the package can be found in this [blog](https:/
 ### 5. Bounty Time 💵
 Within few hours of uploading the packages, I received ping-back with few data like hostname, directory, ipaddress, username to my interact.sh server.
 </br>&nbsp;
+
+another: https://systemweakness.com/rce-via-dependency-confusion-e0ed2a127013
