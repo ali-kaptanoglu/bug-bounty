@@ -1,3 +1,15 @@
+I. Find admin login panel on Shodan
+ssl:"[redacted]" 401
+
+Replace [redacted] with trade name, example: "Yahoo Inc" (Don't put any comma here)
+
+II. Try Default Credentials Every Login Panel .
+In My Case
+Username: Administrator
+Password: Administrator
+
+
+---------------------------------
 # Dork Tools & Collection Lists
 Top 9 Tools to Automate Work with Dorks ⚔️ </br>
 +Top 9 Dork Collection that Every Hunter Needs 🗒️
