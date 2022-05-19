@@ -1,3 +1,9 @@
+
+https://github.com/riramar/Web-Attack-Cheat-Sheet
+
+
+-------------------
+
 I. Find admin login panel on Shodan
 ssl:"[redacted]" 401
 
