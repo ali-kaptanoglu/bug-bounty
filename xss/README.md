@@ -1,4 +1,6 @@
+https://medium.com/@mohameddhanish98/a-story-of-dom-xss-852b6ed3bb5f
 
+--------------
 Inject In Url Its Self Without any Parameter
 
 Payload was Here
