@@ -1,3 +1,5 @@
+
+https://sagarsajeev.medium.com/sensitive-data-exposure-via-403-forbidden-bypass-df9b4dcd0fd
 https://medium.com/@mohameddhanish98/a-story-of-dom-xss-852b6ed3bb5f
 
 --------------
