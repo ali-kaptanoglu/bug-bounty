@@ -1,10 +1,4 @@
-# How I get RCE via Dependency Confusion 💎
-
-### 1. Introduction
-Team gave mobile app and website.</br>
-We didn’t waste of time on mobile app and decided to work on website.</br>
-We just tried to find Admin Panel because main domain was just a single page to download the app.
-</br>&nbsp;
+How I get RCE via Dependency Confusion
 
 ### 2. Recon 🔦
 I started with some Shodan recon and I found a IP that belongs to TARGET.</br>
