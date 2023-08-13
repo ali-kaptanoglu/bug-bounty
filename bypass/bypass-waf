@@ -1,0 +1,71 @@
+Bypassing the Web Application Firewall (WAF) for testing
+Before public Domain Name System (DNS) servers were common, operating systems used the hosts file to resolve hostnames to IP addresses. This file can still be manually edited to bypass regular DNS resolutions, which is useful for testing or development. To access your hosting server without the Web Application Firewall (WAF) in the middle of the connection, follow the steps below. Keep in mind that we don't support modifying your system files — you're doing so at your own risk.
+
+Edit the hosts file
+To begin, find and copy your hosting IP address. Then, do the following.
+
+Windows
+Press the Start button, enter Notepad, and then right-click on Notepad and select Run as administrator.
+In Notepad, select File, then Open, and then type c:\windows\system32\drivers\etc in the File name field. Make sure to change c:\ to the name of the primary disk for your system, which is usually where Windows was installed.
+Select All Files from the drop-down menu near the bottom of the window, and then select hosts.
+ Note: Make sure you select the hosts file that shows as File in the Type column, as there may be more than one file named hosts.
+Open the hosts file and, at the very end, add a line following this structure: 208.104.52.26 www.coolexample.com coolexample.com
+ Note: Replace coolexample.com with your domain and 208.104.52.26 with your hosting IP.
+Save the file and exit Notepad.
+Press the Start button, then type cmd.exe.
+Right-click on Command Prompt, then select Run as administrator.
+Type ipconfig /flushdns in the Command Prompt window and press Enter so the changes take effect.
+Close the Command Prompt window.
+macOS
+Open a terminal window (found in the Applications, then Utilities folder).
+To run Nano text editor with root privileges while opening the hosts file, enter sudo nano /private/etc/hosts and press Return.
+Type your admin password and press Return.
+At the end of the file, add a line matching this structure:  208.104.52.26 www.coolexample.com coolexample.com
+ Note: Replace coolexample.com with your domain and 208.104.52.26 with your hosting IP.
+Press Ctrl+X, then Y and then Return to confirm saving the file with the same name.
+Linux
+Open a terminal window by pressing CTRL+ALT+T or by searching for "terminal" in the applications menu.
+Linux has many distributions, or "distros," with different interfaces, so there are several ways to open a terminal window. If you are running a distro similar to Ubuntu, press Ctrl+Alt+T, which should open the terminal. To be sure, research how to open a terminal window in your distro's documentation.
+To run Nano text editor while opening the hosts file, type sudo nano /etc/hosts in the terminal window and press Enter.
+Type your password and press Enter.
+If you see the message Command 'nano' not found, your Linux distro may not have Nano Text Editor installed. You can either choose a different editor, such as Vim or Gedit, or you can install Nano by using your distribution's package manager. If you are running a distro similar to Ubuntu, run the command sudo apt install nano on Terminal to install Nano Text Editor.
+At the end of the file, add a line matching this structure:  208.104.52.26 www.coolexample.com coolexample.com
+ Note: Replace coolexample.com with your domain and 208.104.52.26 with your hosting IP.
+Press Ctrl+X, then Y and then Enter to confirm saving the file with the same name.
+You should now be able to view your website directly from your hosting server. You can use your browser's incognito mode to help ensure the DNS isn't cached.
+
+Troubleshooting
+If you've implemented Firewall Bypass Prevention, you will need to add your own IP address (which can be found here) to the FileMatch directive:
+
+
+# BEGIN Website Firewall Bypass Prevention
+<If "%{HTTP_HOST} == 'coolexample.com' || %{HTTP_HOST} == 'www.coolexample.com'">
+    Require ip 208.109.0.0/22
+    Require ip 192.88.134.0/23
+    Require ip 185.93.228.0/22
+    Require ip 2a02:fe80::/29
+    Require ip 66.248.200.0/22
+    Require ip 173.245.48.0/20
+    Require ip 103.21.244.0/22
+    Require ip 103.22.200.0/22
+    Require ip 103.31.4.0/22
+    Require ip 141.101.64.0/18
+    Require ip 108.162.192.0/18
+    Require ip 190.93.240.0/20
+    Require ip 188.114.96.0/20
+    Require ip 197.234.240.0/22
+    Require ip 198.41.128.0/17
+    Require ip 162.158.0.0/15
+    Require ip 104.16.0.0/13
+    Require ip 104.24.0.0/14
+    Require ip 172.64.0.0/13
+    Require ip 131.0.72.0/22
+    Require ip 2400:cb00::/32
+    Require ip 2606:4700::/32
+    Require ip 2803:f800::/32
+    Require ip 2405:b500::/32
+    Require ip 2405:8100::/32
+    Require ip 2a06:98c0::/29
+    Require ip 2c0f:f248::/32
+</If>
+# END Website Firewall Bypass Prevention
